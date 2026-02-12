@@ -59,7 +59,7 @@ export const ChallengePage: React.FC = () => {
               onClick={scrollToForm}
               className="order-1 md:order-2 w-full bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-8 py-4 md:py-5 rounded-2xl font-black text-lg md:text-xl leading-tight transition-all shadow-xl shadow-emerald-500/20 mb-6 md:mb-0"
             >
-              CHCI V ROCE 2026 POLOVIČNÍ HCP
+              CHCI V ROCE 2026<br />POLOVIČNÍ HCP
             </button>
           </div>
         </div>
@@ -107,7 +107,7 @@ export const ChallengePage: React.FC = () => {
               onClick={scrollToForm}
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-2xl font-black text-xl leading-tight transition-all shadow-xl shadow-emerald-600/20"
             >
-              CHCI V ROCE 2026 POLOVIČNÍ HCP
+              CHCI V ROCE 2026<br />POLOVIČNÍ HCP
             </button>
           </div>
         </div>
@@ -158,7 +158,7 @@ export const ChallengePage: React.FC = () => {
               onClick={scrollToForm}
               className="w-full bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-5 rounded-2xl font-black text-xl leading-tight transition-all shadow-xl shadow-emerald-600/20"
             >
-              CHCI V ROCE 2026 POLOVIČNÍ HCP
+              CHCI V ROCE 2026<br />POLOVIČNÍ HCP
             </button>
           </div>
         </div>
@@ -196,7 +196,7 @@ export const ChallengePage: React.FC = () => {
               onClick={scrollToForm}
               className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-12 py-5 rounded-2xl font-black text-xl leading-tight transition-all shadow-xl shadow-emerald-500/20"
             >
-              CHCI V ROCE 2026 POLOVIČNÍ HCP
+              CHCI V ROCE 2026<br />POLOVIČNÍ HCP
             </button>
           </div>
         </div>
@@ -231,7 +231,7 @@ export const ChallengePage: React.FC = () => {
               onClick={scrollToForm}
               className="bg-white text-emerald-900 px-12 py-6 rounded-3xl font-black text-2xl leading-tight hover:scale-105 transition-transform shadow-2xl"
             >
-              CHCI V ROCE 2026 POLOVIČNÍ HCP
+              CHCI V ROCE 2026<br />POLOVIČNÍ HCP
             </button>
           </div>
         </div>
@@ -261,7 +261,7 @@ export const ChallengePage: React.FC = () => {
               onClick={scrollToForm}
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-2xl font-black text-xl leading-tight transition-all shadow-xl shadow-emerald-600/20"
             >
-              CHCI V ROCE 2026 POLOVIČNÍ HCP
+              CHCI V ROCE 2026<br />POLOVIČNÍ HCP
             </button>
           </div>
         </div>
