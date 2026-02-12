@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "sans-serif";
+  --font-display: "Plus Jakarta Sans", "sans-serif";
+  
+  --color-emerald-950: #064e3b;
+  --color-emerald-900: #065f46;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .marquee-container {
+    @apply flex overflow-hidden whitespace-nowrap;
+  }
+  
+  .marquee-content {
+    @apply flex;
+    animation: marquee 30s linear infinite;
+  }
+  
+  .golf-gradient {
+    background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+  }
+  
+  .scroll-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scroll-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

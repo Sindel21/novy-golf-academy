@@ -14,27 +14,34 @@ export const ChallengePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-emerald-900/20 blur-[120px] rounded-full"></div>
-        
+
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
           <div className="inline-block bg-emerald-500 text-emerald-950 px-6 py-2 rounded-full font-black text-sm uppercase tracking-widest mb-6 md:mb-8 animate-bounce">
             Limitovaná nabídka pro 7 hráčů
           </div>
-          
+
           <h1 className="text-4xl md:text-8xl font-black mb-6 md:mb-8 leading-[1.05] tracking-tighter uppercase">
-            VSADÍM <span className="text-emerald-400 italic">50 000 KČ</span><br/>
-            NA VÁŠ GOLFOVÝ<br/>
+            VSADÍM <span className="text-emerald-400 italic">50 000 KČ</span><br />
+            NA VÁŠ GOLFOVÝ<br />
             ÚSPĚCH
           </h1>
-          
+
           <p className="text-lg md:text-3xl font-bold text-emerald-100/70 mb-8 md:mb-12 max-w-4xl mx-auto">
             Hledám 7 hráčů, kterým v roce 2026 rozpůlím HCP. Pokud to nedokážeme, vyplatím vám bonus.
           </p>
 
           <div className="max-w-4xl mx-auto aspect-video bg-slate-900 rounded-[2rem] border-4 border-slate-800 shadow-2xl overflow-hidden mb-8 md:mb-12 relative group cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=2000" className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Marek Nový Video" />
+            <img
+              src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=1200"
+              className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+              alt="Marek Nový Video"
+              width="1200"
+              height="675"
+              loading="lazy"
+            />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-24 h-24 bg-emerald-500 rounded-full flex items-center justify-center text-emerald-950 pl-2 shadow-2xl group-hover:scale-110 transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="m7 4 12 8-12 8V4z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="m7 4 12 8-12 8V4z" /></svg>
               </div>
             </div>
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 text-xs font-bold tracking-widest uppercase">
@@ -48,7 +55,7 @@ export const ChallengePage: React.FC = () => {
               <h3 className="text-lg font-bold mb-2 md:mb-4 uppercase tracking-widest text-emerald-400">POČET ZBÝVAJÍCÍCH MÍST:</h3>
               <div className="text-5xl md:text-6xl font-black text-white mb-0 md:mb-6">5 <span className="text-slate-600 text-3xl">/ 7</span></div>
             </div>
-            <button 
+            <button
               onClick={scrollToForm}
               className="order-1 md:order-2 w-full bg-emerald-500 hover:bg-emerald-400 text-emerald-950 py-4 md:py-5 rounded-2xl font-black text-lg md:text-xl transition-all shadow-xl shadow-emerald-500/20 mb-6 md:mb-0"
             >
@@ -72,31 +79,31 @@ export const ChallengePage: React.FC = () => {
           </div>
 
           <div className="bg-slate-50 border-2 border-slate-200 p-12 rounded-[3rem] shadow-sm italic relative">
-             <div className="text-6xl text-emerald-200 absolute -top-4 -left-4">"</div>
-             <h3 className="text-2xl font-black mb-6">PROČ VÁM CHCI ZAPLATIT ZA VÁŠ ÚSPĚCH?</h3>
-             <p className="mb-6 leading-relaxed text-lg">
-               „Možná si říkáte, že jsem se zbláznil. Proč bych vám měl po měsících tvrdé práce vracet 50 000 Kč ze své odměny? Odpověď je upřímná: Hledám motivaci, kterou si za peníze nekoupíte.
-             </p>
-             <div className="space-y-6">
-               <div className="flex gap-4">
-                 <span className="font-black text-emerald-600 text-2xl">1.</span>
-                 <p className="font-bold">Chci v týmu jen dravce. Ne lidi, co si jdou občas bouchnout. Chci lidi, kteří budou makat, aby mě o těch 50 000 Kč na konci sezóny připravili.</p>
-               </div>
-               <div className="flex gap-4">
-                 <span className="font-black text-emerald-600 text-2xl">2.</span>
-                 <p className="font-bold">Věřím svému systému. Za 22 let v golfu vím, že když dodržíte můj plán, ten výsledek se dostaví. Je to matematická jistota.</p>
-               </div>
-               <div className="flex gap-4">
-                 <span className="font-black text-emerald-600 text-2xl">3.</span>
-                 <p className="font-bold">Moje vizitka je váš HCP. Když uspějete, získáte nejlepší golf svého života. Já získám důkaz, že moje metoda funguje u kohokoliv.</p>
-               </div>
-             </div>
-             <p className="mt-8 font-black text-xl text-emerald-700">
-               Můj cíl pro rok 2026 je jednoduchý: Chci být v říjnu tím nejhůře placeným trenérem v Praze, ale nejlepším v celé republice.
-             </p>
+            <div className="text-6xl text-emerald-200 absolute -top-4 -left-4">"</div>
+            <h3 className="text-2xl font-black mb-6">PROČ VÁM CHCI ZAPLATIT ZA VÁŠ ÚSPĚCH?</h3>
+            <p className="mb-6 leading-relaxed text-lg">
+              „Možná si říkáte, že jsem se zbláznil. Proč bych vám měl po měsících tvrdé práce vracet 50 000 Kč ze své odměny? Odpověď je upřímná: Hledám motivaci, kterou si za peníze nekoupíte.
+            </p>
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <span className="font-black text-emerald-600 text-2xl">1.</span>
+                <p className="font-bold">Chci v týmu jen dravce. Ne lidi, co si jdou občas bouchnout. Chci lidi, kteří budou makat, aby mě o těch 50 000 Kč na konci sezóny připravili.</p>
+              </div>
+              <div className="flex gap-4">
+                <span className="font-black text-emerald-600 text-2xl">2.</span>
+                <p className="font-bold">Věřím svému systému. Za 22 let v golfu vím, že když dodržíte můj plán, ten výsledek se dostaví. Je to matematická jistota.</p>
+              </div>
+              <div className="flex gap-4">
+                <span className="font-black text-emerald-600 text-2xl">3.</span>
+                <p className="font-bold">Moje vizitka je váš HCP. Když uspějete, získáte nejlepší golf svého života. Já získám důkaz, že moje metoda funguje u kohokoliv.</p>
+              </div>
+            </div>
+            <p className="mt-8 font-black text-xl text-emerald-700">
+              Můj cíl pro rok 2026 je jednoduchý: Chci být v říjnu tím nejhůře placeným trenérem v Praze, ale nejlepším v celé republice.
+            </p>
           </div>
           <div className="mt-16 text-center">
-            <button 
+            <button
               onClick={scrollToForm}
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-emerald-600/20"
             >
@@ -133,7 +140,13 @@ export const ChallengePage: React.FC = () => {
           </div>
           <div className="mt-12 pt-12 border-t border-slate-100 flex items-center gap-6">
             <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-emerald-500">
-              <img src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=300" alt="Marek Nový" />
+              <img
+                src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=300"
+                alt="Marek Nový"
+                width="80"
+                height="80"
+                loading="lazy"
+              />
             </div>
             <div>
               <p className="font-black text-xl">Marek Nový</p>
@@ -141,7 +154,7 @@ export const ChallengePage: React.FC = () => {
             </div>
           </div>
           <div className="mt-16 text-center">
-            <button 
+            <button
               onClick={scrollToForm}
               className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-emerald-600/20"
             >
@@ -156,7 +169,7 @@ export const ChallengePage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8 max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-              CO NIKDY <span className="text-red-500 italic">NEDĚLAT</span>,<br/>
+              CO NIKDY <span className="text-red-500 italic">NEDĚLAT</span>,<br />
               POKUD SE CHCETE ZLEPŠIT
             </h2>
             <p className="text-xl text-slate-400">Chyby, které vás stojí měsíce tvrdé dřiny a nikdo vám je neřekne.</p>
@@ -179,7 +192,7 @@ export const ChallengePage: React.FC = () => {
             ))}
           </div>
           <div className="mt-20 text-center">
-            <button 
+            <button
               onClick={scrollToForm}
               className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-12 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-emerald-500/20"
             >
@@ -195,7 +208,7 @@ export const ChallengePage: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="mb-20">
             <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight uppercase tracking-tighter">
-              TADY JE ZLOMEK TOHO,<br/>CO NAJDETE V <span className="text-emerald-300 italic">NGC</span>
+              TADY JE ZLOMEK TOHO,<br />CO NAJDETE V <span className="text-emerald-300 italic">NGC</span>
             </h2>
           </div>
 
@@ -212,14 +225,14 @@ export const ChallengePage: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-20 text-center">
-             <button 
-               onClick={scrollToForm}
-               className="bg-white text-emerald-900 px-12 py-6 rounded-3xl font-black text-2xl hover:scale-105 transition-transform shadow-2xl"
-             >
-               CHCI V ROCE 2026 POLOVIČNÍ HCP
-             </button>
+            <button
+              onClick={scrollToForm}
+              className="bg-white text-emerald-900 px-12 py-6 rounded-3xl font-black text-2xl hover:scale-105 transition-transform shadow-2xl"
+            >
+              CHCI V ROCE 2026 POLOVIČNÍ HCP
+            </button>
           </div>
         </div>
       </section>
@@ -227,24 +240,24 @@ export const ChallengePage: React.FC = () => {
       {/* Included Content from NGA */}
       <section className="py-24 bg-white text-slate-900">
         <div className="container mx-auto px-4 md:px-8">
-           <div className="text-center mb-16">
-             <h2 className="text-4xl font-black mb-4 uppercase">VŠE, CO POTŘEBUJETE, NA JEDNOM MÍSTĚ</h2>
-             <p className="text-xl text-slate-500">Jako člen NGC získáváte automaticky přístup k celému portálu NovyGolfAcademy.cz</p>
-           </div>
-           
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-             {[
-               "GOLF ONLINE AMATEUR LEAGUE", "PUTTING SECRETS", "GOLF AKCELERÁTOR",
-               "SLICE TERMINÁTOR", "WINTER GOLF CLASSIC", "JÓGA PRO GOLFISTY"
-             ].map((item, i) => (
-               <div key={i} className="p-6 border border-slate-100 bg-slate-50 rounded-2xl flex items-center gap-4">
-                 <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">✓</div>
-                 <span className="font-bold text-slate-800">{item}</span>
-               </div>
-             ))}
-           </div>
-           <div className="mt-16 text-center">
-            <button 
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black mb-4 uppercase">VŠE, CO POTŘEBUJETE, NA JEDNOM MÍSTĚ</h2>
+            <p className="text-xl text-slate-500">Jako člen NGC získáváte automaticky přístup k celému portálu NovyGolfAcademy.cz</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "GOLF ONLINE AMATEUR LEAGUE", "PUTTING SECRETS", "GOLF AKCELERÁTOR",
+              "SLICE TERMINÁTOR", "WINTER GOLF CLASSIC", "JÓGA PRO GOLFISTY"
+            ].map((item, i) => (
+              <div key={i} className="p-6 border border-slate-100 bg-slate-50 rounded-2xl flex items-center gap-4">
+                <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold">✓</div>
+                <span className="font-bold text-slate-800">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-16 text-center">
+            <button
               onClick={scrollToForm}
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-12 py-5 rounded-2xl font-black text-xl transition-all shadow-xl shadow-emerald-600/20"
             >
@@ -282,9 +295,9 @@ export const ChallengePage: React.FC = () => {
             <div id="application-form" className="bg-emerald-950/50 p-10 rounded-2xl border border-emerald-500/30 text-center">
               <h3 className="text-2xl font-black mb-6 uppercase">Zadejte prosím mail pro detaily o ceně</h3>
               <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input 
-                  type="email" 
-                  placeholder="Váš e-mail (např. email@priklad.com)" 
+                <input
+                  type="email"
+                  placeholder="Váš e-mail (např. email@priklad.com)"
                   className="flex-grow bg-slate-800 border-2 border-slate-700 rounded-xl px-6 py-4 text-white focus:border-emerald-500 outline-none transition-all"
                 />
                 <button className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-8 py-4 rounded-xl font-black uppercase tracking-widest whitespace-nowrap transition-all">

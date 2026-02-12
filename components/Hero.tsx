@@ -6,10 +6,13 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=2070" 
-          alt="Golf background" 
+        <img
+          src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=1200"
+          alt="Golf background"
           className="w-full h-full object-cover"
+          width="1200"
+          height="800"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 via-emerald-900/60 to-transparent"></div>
       </div>
@@ -23,19 +26,19 @@ export const Hero: React.FC = () => {
             </span>
             Online golfová platforma pro každého
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-6 drop-shadow-sm">
             Pomáhám golfistům mít <span className="text-emerald-400">RADOST</span> ze hry
           </h1>
-          
+
           <p className="text-lg md:text-xl text-emerald-50/90 mb-10 max-w-xl leading-relaxed">
             Zlepšete svůj handicap bez radikálních změn ve švihu. Připojte se k akademii Marka Nového a začněte trefovat lépe už dnes.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#" onClick={(e) => e.preventDefault()} className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-8 py-4 rounded-xl font-extrabold text-lg transition-all shadow-xl shadow-emerald-900/40 flex items-center justify-center gap-2">
               Vyzkoušet trénink zdarma
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
             </a>
             <a href="#" onClick={(e) => e.preventDefault()} className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center">
               Prohlédnout programy
@@ -45,7 +48,15 @@ export const Hero: React.FC = () => {
           <div className="mt-12 flex items-center gap-8">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map(i => (
-                <img key={i} src={`https://picsum.photos/100/100?random=${i}`} className="w-10 h-10 rounded-full border-2 border-emerald-900" alt="Avatar" />
+                <img
+                  key={i}
+                  src={`https://i.pravatar.cc/100?u=${i}`}
+                  className="w-10 h-10 rounded-full border-2 border-emerald-900"
+                  alt="Student Avatar"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
               ))}
               <div className="w-10 h-10 rounded-full border-2 border-emerald-900 bg-emerald-600 flex items-center justify-center text-[10px] font-bold text-white">+2k</div>
             </div>
