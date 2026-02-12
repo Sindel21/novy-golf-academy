@@ -9,10 +9,13 @@ export const About: React.FC = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="absolute -inset-4 bg-emerald-500/10 blur-2xl rounded-full"></div>
             <div className="relative rounded-[2rem] overflow-hidden border-4 border-slate-800 shadow-2xl aspect-[4/5]">
-              <img 
-                src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=1200" 
-                alt="Marek Nový" 
+              <img
+                src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=800"
+                alt="Marek Nový"
                 className="w-full h-full object-cover"
+                width="600"
+                height="750"
+                loading="lazy"
               />
               <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-slate-950/90 to-transparent">
                 <p className="text-emerald-400 font-bold text-sm tracking-widest uppercase mb-1">Hlavní Trenér & Zakladatel</p>
@@ -60,7 +63,7 @@ export const About: React.FC = () => {
                 ))}
               </ul>
             </div>
-            
+
             <div className="mt-12 flex items-center gap-6">
               <div>
                 <img src="https://picsum.photos/100/100?random=50" className="w-14 h-14 rounded-full border-2 border-emerald-500" alt="Client" />

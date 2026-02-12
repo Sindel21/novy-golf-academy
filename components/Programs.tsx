@@ -43,7 +43,7 @@ export const Programs: React.FC = () => {
           </div>
           <a href="#" onClick={(e) => e.preventDefault()} className="text-emerald-700 font-bold hover:underline flex items-center gap-2 mb-2 transition-all">
             Zobrazit všechny programy
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
           </a>
         </div>
 
@@ -51,7 +51,14 @@ export const Programs: React.FC = () => {
           {programList.map((prog, i) => (
             <div key={i} className="group bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 flex flex-col h-full">
               <div className="relative h-64 overflow-hidden">
-                <img src={prog.img} alt={prog.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img
+                  src={prog.img.replace('w=800', 'w=600')}
+                  alt={prog.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  width="400"
+                  height="256"
+                  loading="lazy"
+                />
                 <div className="absolute top-4 left-4">
                   <span className="bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-emerald-800 shadow-sm border border-emerald-50">
                     {prog.tag}
