@@ -42,10 +42,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
   };
 
   // Text color logic for general menu items
-  const menuTextColor = isScrolled ? 'text-slate-600 hover:text-emerald-600' : 'text-white/80 hover:text-white';
+  const menuTextColor = 'text-white/80 hover:text-white';
 
   // Brand/Logo text color logic
-  const brandTextColor = isScrolled ? 'text-emerald-900' : 'text-white';
+  const brandTextColor = 'text-white';
 
   return (
     <div className="fixed top-0 left-0 w-full z-50">
@@ -54,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
 
       {/* Navbar Background Layer */}
       <div
-        className={`absolute inset-0 transition-[background-color,box-shadow] duration-300 ease-in-out ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
+        className={`absolute inset-0 transition-[background-color,box-shadow] duration-300 ease-in-out ${isScrolled ? 'bg-slate-950/95 backdrop-blur-md shadow-md' : 'bg-transparent'
           }`}
       />
 
@@ -77,13 +77,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
           <button
             onClick={() => onNavigate('home')}
-            className={`transition-colors ${current === 'home' ? (isScrolled ? 'text-emerald-600 font-bold underline' : 'text-emerald-400 font-bold underline') : menuTextColor} underline-offset-4`}
+            className={`transition-colors ${current === 'home' ? 'text-emerald-400 font-bold underline' : menuTextColor} underline-offset-4`}
           >
             Domů
           </button>
           <button
             onClick={() => onNavigate('challenge')}
-            className={`transition-colors ${current === 'challenge' ? (isScrolled ? 'text-emerald-600 font-bold underline' : 'text-emerald-400 font-bold underline') : menuTextColor} underline-offset-4`}
+            className={`transition-colors ${current === 'challenge' ? 'text-emerald-400 font-bold underline' : menuTextColor} underline-offset-4`}
           >
             Challenge 2026
           </button>
@@ -101,7 +101,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`p-2 rounded-lg transition-colors md:hidden ${isScrolled || isMenuOpen ? 'text-slate-900' : 'text-white'}`}
+            className={`p-2 rounded-lg transition-colors md:hidden ${isMenuOpen ? 'text-slate-900' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
