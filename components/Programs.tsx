@@ -52,7 +52,7 @@ export const Programs: React.FC = () => {
             <div key={i} className="group bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 flex flex-col h-full">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={prog.img.replace('w=800', 'w=600')}
+                  src={prog.img.replace('q=80', 'q=60').replace('w=600', 'w=450')}
                   alt={prog.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   width="400"

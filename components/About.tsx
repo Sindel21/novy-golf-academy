@@ -10,7 +10,7 @@ export const About: React.FC = () => {
             <div className="absolute -inset-4 bg-emerald-500/10 blur-2xl rounded-full"></div>
             <div className="relative rounded-[2rem] overflow-hidden border-4 border-slate-800 shadow-2xl aspect-[4/5]">
               <img
-                src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&q=60&w=600"
                 alt="Marek Nový"
                 className="w-full h-full object-cover"
                 width="600"

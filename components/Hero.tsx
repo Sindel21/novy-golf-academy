@@ -7,13 +7,13 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=60&w=640"
-          srcSet="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=60&w=640 640w, https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=60&w=1200 1200w"
+          src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=60&w=600"
+          srcSet="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=60&w=600 600w, https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=60&w=1000 1000w"
           sizes="100vw"
           alt="Golf background"
           className="w-full h-full object-cover"
-          width="640"
-          height="427"
+          width="600"
+          height="400"
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 via-emerald-900/60 to-transparent"></div>
