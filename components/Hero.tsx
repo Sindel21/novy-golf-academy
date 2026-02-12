@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Marquee Section */}
-      <div className="absolute bottom-0 w-full bg-emerald-900/80 backdrop-blur-sm py-4 border-t border-white/10 overflow-hidden hidden md:block">
+      <div className="absolute bottom-0 w-full bg-emerald-900/80 backdrop-blur-sm py-4 border-t border-white/10 overflow-hidden">
         <div className="marquee-container">
           <div className="marquee-content flex gap-12 items-center">
             {[1, 2, 3].map(i => (

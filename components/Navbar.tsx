@@ -11,16 +11,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sentinel = document.getElementById('nav-sentinel');
-    if (!sentinel) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      // If the sentinel is NOT intersecting, it means we've scrolled past it
-      setIsScrolled(!entries[0].isIntersecting);
-    }, { threshold: [1.0] });
-
-    observer.observe(sentinel);
-    return () => observer.disconnect();
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Lock body scroll when mobile menu is open to prevent background scrolling
@@ -49,8 +51,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50">
-      {/* Sentinel to detect scroll without scroll events */}
-      <div id="nav-sentinel" className="absolute top-0 h-4 w-full pointer-events-none" style={{ top: '20px' }} />
 
       {/* Navbar Background Layer */}
       <div
