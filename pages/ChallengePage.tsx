@@ -270,7 +270,7 @@ export const ChallengePage: React.FC = () => {
       {/* Detailed Offer Table */}
       <section className="py-24 bg-slate-950 text-white">
         <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-          <div className="bg-slate-900 rounded-[3rem] p-12 border border-emerald-500/20 shadow-2xl shadow-emerald-500/5">
+          <div className="bg-slate-900 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 border border-emerald-500/20 shadow-2xl shadow-emerald-500/5">
             <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase italic text-emerald-400">TOTO VŠE JE SOUČÁSTÍ NOVÝ GOLF CHALLENGE</h2>
             <div className="space-y-6 mb-12">
               {[
@@ -292,15 +292,15 @@ export const ChallengePage: React.FC = () => {
               ))}
             </div>
 
-            <div id="application-form" className="bg-emerald-950/50 p-10 rounded-2xl border border-emerald-500/30 text-center">
-              <h3 className="text-2xl font-black mb-6 uppercase">Zadejte prosím mail pro detaily o ceně</h3>
+            <div id="application-form" className="bg-emerald-950/50 p-6 md:p-10 rounded-2xl border border-emerald-500/30 text-center">
+              <h3 className="text-xl md:text-2xl font-black mb-6 uppercase">Zadejte prosím mail pro detaily o ceně</h3>
               <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                 <input
                   type="email"
                   placeholder="Váš e-mail (např. email@priklad.com)"
-                  className="flex-grow bg-slate-800 border-2 border-slate-700 rounded-xl px-6 py-4 text-white focus:border-emerald-500 outline-none transition-all"
+                  className="flex-grow bg-slate-800 border-2 border-slate-700 rounded-xl px-4 py-4 text-white focus:border-emerald-500 outline-none transition-all text-sm md:text-base"
                 />
-                <button className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-8 py-4 rounded-xl font-black uppercase tracking-widest whitespace-nowrap transition-all">
+                <button className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-6 py-4 rounded-xl font-black uppercase tracking-widest whitespace-nowrap transition-all text-sm md:text-base">
                   Chci se ucházet
                 </button>
               </div>
