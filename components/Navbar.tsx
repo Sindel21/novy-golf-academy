@@ -38,16 +38,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
 
   // Text color logic for general menu items
   const menuTextColor = isScrolled ? 'text-slate-600 hover:text-emerald-600' : 'text-white/80 hover:text-white';
-  
+
   // Brand/Logo text color logic
   const brandTextColor = isScrolled ? 'text-emerald-900' : 'text-white';
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed w-full z-50 transition-[background-color,padding,box-shadow] duration-300 ease-in-out ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         {/* Logo */}
-        <div 
-          className="flex items-center gap-2 cursor-pointer z-50" 
+        <div
+          className="flex items-center gap-2 cursor-pointer z-50"
           onClick={() => handleMobileNavigate('home')}
         >
           <div className="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center text-white font-bold text-xl">
@@ -57,17 +57,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
             NOVY GOLF ACADEMY
           </span>
         </div>
-        
+
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
-          <button 
-            onClick={() => onNavigate('home')} 
+          <button
+            onClick={() => onNavigate('home')}
             className={`transition-colors ${current === 'home' ? (isScrolled ? 'text-emerald-600 font-bold underline' : 'text-emerald-400 font-bold underline') : menuTextColor} underline-offset-4`}
           >
             Domů
           </button>
-          <button 
-            onClick={() => onNavigate('challenge')} 
+          <button
+            onClick={() => onNavigate('challenge')}
             className={`transition-colors ${current === 'challenge' ? (isScrolled ? 'text-emerald-600 font-bold underline' : 'text-emerald-400 font-bold underline') : menuTextColor} underline-offset-4`}
           >
             Challenge 2026
@@ -76,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
 
         {/* Desktop Button & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button 
+          <button
             onClick={() => onNavigate('challenge')}
             className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-emerald-200 hidden sm:block"
           >
@@ -84,39 +84,42 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
           </button>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`p-2 rounded-lg transition-colors z-50 md:hidden ${isScrolled || isMenuOpen ? 'text-slate-900' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
             )}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white transition-all duration-500 md:hidden ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`} style={{ zIndex: 40 }}>
+      <div
+        className={`fixed inset-0 bg-white transition-[transform,opacity] duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
+        style={{ zIndex: 40 }}
+      >
         <div className="flex flex-col items-center justify-center h-full gap-8 p-4 overflow-y-auto">
-          <button 
-            onClick={() => handleMobileNavigate('home')} 
+          <button
+            onClick={() => handleMobileNavigate('home')}
             className={`text-2xl font-black uppercase tracking-widest ${current === 'home' ? 'text-emerald-600 underline' : 'text-slate-900'} underline-offset-8`}
           >
             Domů
           </button>
-          <button 
-            onClick={() => handleMobileNavigate('challenge')} 
+          <button
+            onClick={() => handleMobileNavigate('challenge')}
             className={`text-2xl font-black uppercase tracking-widest ${current === 'challenge' ? 'text-emerald-600 underline' : 'text-slate-900'} underline-offset-8`}
           >
             Challenge 2026
           </button>
-          
+
           <div className="w-full max-w-xs h-px bg-slate-100 my-4"></div>
-          
-          <button 
+
+          <button
             onClick={() => handleMobileNavigate('challenge')}
             className="w-full max-w-xs bg-emerald-600 text-white py-5 rounded-2xl font-black text-xl shadow-xl shadow-emerald-200"
           >
