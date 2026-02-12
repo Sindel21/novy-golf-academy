@@ -43,11 +43,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
   const brandTextColor = isScrolled ? 'text-emerald-900' : 'text-white';
 
   return (
-    <nav className={`fixed w-full z-50 transition-[background-color,padding,box-shadow] duration-300 ease-in-out ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
-      <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+    <div className="fixed top-0 left-0 w-full z-50">
+      {/* Navbar Background Layer */}
+      <div
+        className={`absolute inset-0 transition-[background-color,box-shadow] duration-300 ease-in-out ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
+          }`}
+      />
+
+      {/* Navbar Content */}
+      <nav className={`relative z-50 container mx-auto px-4 md:px-8 flex justify-between items-center transition-[padding] duration-300 ${isScrolled ? 'py-3' : 'py-5'}`}>
         {/* Logo */}
         <div
-          className="flex items-center gap-2 cursor-pointer z-50"
+          className="flex items-center gap-2 cursor-pointer relative z-50"
           onClick={() => handleMobileNavigate('home')}
         >
           <div className="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center text-white font-bold text-xl">
@@ -75,7 +82,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
         </div>
 
         {/* Desktop Button & Mobile Toggle */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 relative z-50">
           <button
             onClick={() => onNavigate('challenge')}
             className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-emerald-200 hidden sm:block"
@@ -86,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`p-2 rounded-lg transition-colors z-50 md:hidden ${isScrolled || isMenuOpen ? 'text-slate-900' : 'text-white'}`}
+            className={`p-2 rounded-lg transition-colors md:hidden ${isScrolled || isMenuOpen ? 'text-slate-900' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -96,11 +103,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
             )}
           </button>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-white transition-[transform,opacity] duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
+        className={`fixed inset-0 bg-white md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+          }`}
         style={{ zIndex: 40 }}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 p-4 overflow-y-auto">
@@ -133,6 +141,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
