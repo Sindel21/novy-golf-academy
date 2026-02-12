@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, current }) => {
         <div className="flex items-center gap-4">
           <button
             onClick={() => onNavigate('challenge')}
-            className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-emerald-200 hidden sm:block"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-emerald-200 hidden sm:block"
           >
             Vsadit na úspěch
           </button>

@@ -36,11 +36,11 @@ export const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#" onClick={(e) => e.preventDefault()} className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-8 py-4 rounded-xl font-extrabold text-lg transition-all shadow-xl shadow-emerald-900/40 flex items-center justify-center gap-2">
+            <a href="#" onClick={(e) => e.preventDefault()} className="bg-emerald-500 hover:bg-emerald-400 text-emerald-950 px-10 py-4 rounded-xl font-extrabold text-lg transition-all shadow-xl shadow-emerald-900/40 flex items-center justify-center gap-2">
               Vyzkoušet trénink zdarma
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
             </a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center">
+            <a href="#" onClick={(e) => e.preventDefault()} className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center">
               Prohlédnout programy
             </a>
           </div>
